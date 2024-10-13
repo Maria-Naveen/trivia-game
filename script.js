@@ -124,6 +124,7 @@ continueButton.addEventListener("click", () => {
   currentQuestionIndex = 0;
   resultSection.style.display = "none"; // Hide result section
   categoryBox.style.display = "block"; // Show category form again
+  selectedCategory.value = ""; // Reset dropdown to empty option
   gameEnded = false; // Reset game ended state
 });
 
