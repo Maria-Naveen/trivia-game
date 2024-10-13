@@ -104,7 +104,7 @@ function handleAnswer(selectedAnswer, question) {
 // End Game Function
 function endGame() {
   questionContainer.style.display = "none"; // Hide the questions
-  resultText.innerHTML = `Game over! <br>Scores:<br> ${players[0].name}: ${players[0].score}<br> ${players[1].name}: ${players[1].score}`;
+  resultText.innerHTML = `<br>Scores:<br> ${players[0].name}: ${players[0].score}<br> ${players[1].name}: ${players[1].score}`;
   if (gameEnded) {
     const winner =
       players[0].score === players[1].score
@@ -112,7 +112,7 @@ function endGame() {
         : players[0].score > players[1].score
         ? `${players[0].name} wins!`
         : `${players[1].name} wins!`;
-    resultText.innerHTML += `<br><br>${winner}`; // Append the winner announcement
+    resultText.innerHTML += `<br/>Game over!<br/> The result is:<br/>${winner}`; // Append the winner announcement
   }
   resultSection.style.display = "block"; // Show the result section
 }
