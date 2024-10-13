@@ -1,0 +1,149 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Header Styles */
+.header {
+  text-align: center;
+  color: #255876;
+  background-color: #d5d8d9;
+  padding: 0.5em;
+}
+
+/* Entry Form Styles */
+#entryForm {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 2em auto;
+  padding: 2em;
+  border: 1px solid #255876;
+}
+
+#entryForm > input,
+#entryForm > label {
+  margin-top: 0.5em;
+}
+
+/* Start Button Styles */
+#startBtn {
+  width: 50%;
+  margin-top: 0.75em;
+  padding: 0.5em;
+  align-self: center;
+  border: none;
+  color: #255876;
+  font-weight: bold;
+  border-radius: 4px;
+  background-color: #f2b143;
+  cursor: pointer;
+}
+
+/* Category Box Styles */
+#categoryBox {
+  width: 90%;
+  padding: 2em;
+  border: 1px solid #f2b143;
+  display: none;
+  margin: 0.5em auto 0;
+}
+
+/* Question Container Styles */
+#questionContainer {
+  max-width: 90%;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #2980b9;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+#questionText {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Answer Button Styles */
+#answerButtons button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #f2b143;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#answerButtons button:hover {
+  background-color: #255876;
+}
+
+/* Result Section Styles */
+#resultSection {
+  max-width: 90%;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #27ae60;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+#resultText {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Continue and Stop Button Styles */
+#continueButton,
+#stopButton {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #27ae60;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#continueButton:hover,
+#stopButton:hover {
+  background-color: #219653;
+}
+
+/* Player Turn Label Styles */
+#playerTurn {
+  font-size: 18px;
+  text-align: center;
+  margin: 15px 0;
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 600px) {
+  #entryForm {
+    width: 50%;
+  }
+
+  #startBtn {
+    width: 25%;
+  }
+
+  #categoryBox {
+    width: 50%;
+  }
+
+  #questionContainer,
+  #resultSection {
+    max-width: 600px;
+  }
+}
