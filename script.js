@@ -103,11 +103,9 @@ function handleAnswer(selectedAnswer, question) {
 
 // End Game Function
 function endGame() {
-  if (!gameEnded) {
-    questionContainer.style.display = "none"; // Hide the questions
-    resultText.innerHTML = `Game over! <br>Scores:<br> ${players[0].name}: ${players[0].score}<br> ${players[1].name}: ${players[1].score}`;
-    resultSection.style.display = "block"; // Show the result section without declaring a winner
-  } else {
+  questionContainer.style.display = "none"; // Hide the questions
+  resultText.innerHTML = `Game over! <br>Scores:<br> ${players[0].name}: ${players[0].score}<br> ${players[1].name}: ${players[1].score}`;
+  if (gameEnded) {
     const winner =
       players[0].score === players[1].score
         ? "It's a tie!"
@@ -116,6 +114,7 @@ function endGame() {
         : `${players[1].name} wins!`;
     resultText.innerHTML += `<br><br>${winner}`; // Append the winner announcement
   }
+  resultSection.style.display = "block"; // Show the result section
 }
 
 // Continue Button Event Listener
@@ -132,7 +131,5 @@ continueButton.addEventListener("click", () => {
 stopButton.addEventListener("click", () => {
   alert("Thanks for playing!");
   gameEnded = true; // Mark the game as ended
-  resultSection.style.display = "none"; // Hide result section
   endGame(); // Call endGame to show the final winner
-  location.reload(); // Reload the page to restart the game
 });
